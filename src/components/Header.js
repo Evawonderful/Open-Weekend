@@ -1,5 +1,7 @@
 import React from 'react';
 import logo from '../assets/sway.png';
+import { Link } from 'react-router-dom';
+
 
 const Header = () => {
   return (
@@ -17,8 +19,8 @@ const Header = () => {
           </ul>
         </nav>
         <div>
-          <button className="bg-blue-600 text-white py-2 px-4 rounded-md">Sign Up</button>
-          <button className="bg-transparent text-blue-600 py-2 px-4 ml-2">Sign In</button>
+        <Link  to="/signup" ><button className="bg-blue-600 text-white py-2 px-4 rounded-md">Sign Up</button></Link>
+          <Link  to="/login" ><button className="bg-transparent text-blue-600 py-2 px-4 ml-2">Sign In</button></Link>
         </div>
       </div>
     </header>

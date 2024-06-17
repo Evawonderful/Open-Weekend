@@ -1,25 +1,28 @@
 import React from 'react';
-import Header from './components/Header';
-import Hero from './components/Hero';
-import About from './components/About';
-import Events from './components/Events';
-import Places from './components/Places';
-import Map from './components/Map';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Login from './components/Login';
+import LandingPage from './components/LandingPage';
+import ForgotPassword from './components/ForgotPassword';
+import SignUp from './components/SignUp';
 
 function App() {
   return (
-    <div className="font-roboto">
-      <Header />
-      <Hero />
-      <About />
-      <Events />
-      <Places />
-      <Map />
-      <Contact />
-      <Footer />
-    </div>
+    <Router>
+      <div>
+        <Routes>
+          <Route path="/" element={
+            <>
+              <LandingPage/>
+            </>
+          } />
+          <Route path="/login" element={<Login/>} />
+          <Route path="/signup" element={<SignUp/>} />
+          <Route path="/forgot-password" element={<ForgotPassword/>} />
+
+        </Routes>
+        
+      </div>
+    </Router>
   );
 }
 
