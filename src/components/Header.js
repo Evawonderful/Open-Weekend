@@ -2,7 +2,6 @@ import React from 'react';
 import logo from '../assets/sway.png';
 import { Link } from 'react-router-dom';
 
-
 const Header = () => {
   return (
     <header className="bg-white shadow-md py-4">
@@ -12,10 +11,10 @@ const Header = () => {
            </div>
         <nav>
           <ul className="flex space-x-8">
-            <li><a href="#" className="text-gray-700 hover:text-blue-600">Home</a></li>
+            <li><a href="/" className="text-gray-700 hover:text-blue-600">Home</a></li>
             <li><a href="#" className="text-gray-700 hover:text-blue-600">Destinations</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-blue-600">Events</a></li>
-            <li><a href="#" className="text-gray-700 hover:text-blue-600">Contact</a></li>
+            <Link  to="/events"><li><a href="#" className="text-gray-700 hover:text-blue-600">Events</a></li></Link>
+            <li><a href="#contact" className="text-gray-700 hover:text-blue-600">Contact</a></li>
           </ul>
         </nav>
         <div>

@@ -16,7 +16,7 @@ const LandingPage = () => {
             <Events />
             <Places />
             <Map />
-            <Contact />
+            <Contact id="contact"/>
             <Footer />
         </>
     );
