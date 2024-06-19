@@ -5,7 +5,7 @@ import LandingPage from './components/LandingPage';
 import ForgotPassword from './components/ForgotPassword';
 import SignUp from './components/SignUp';
 import EventsPage from './components/EventsPage';
-
+import EventDetails from './components/EventDetails';
 function App() {
   return (
     <Router>
@@ -20,7 +20,7 @@ function App() {
           <Route path="/signup" element={<SignUp/>} />
           <Route path="/forgot-password" element={<ForgotPassword/>} />
           <Route path="/events" element={<EventsPage/>} />
-
+          <Route path="/events/:id" component={EventDetails} />
         </Routes>
         
       </div>
